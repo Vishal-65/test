@@ -11,6 +11,9 @@ public class MeanMedianMode {
         int Mean=FindMean(arr);
         int Median=FindMedian(arr);
         int Mode=FindMode(arr);
+        System.out.println("Mean:"+ Mean);
+        System.out.println("Median:"+ Median);
+        System.out.println("Mode:"+ Mode);
 
     }
     public static int FindMean(int arr[]){
@@ -37,12 +40,11 @@ public class MeanMedianMode {
         int res = 0;
         for (int i = 0; i < arr.length; i++) {
             int count = 0;
-            res = 0;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
                     count++;
                 }
-                if (mini > count) {
+                if (mini < count) {
                     mini = count;
                     res = arr[i];
                 }
