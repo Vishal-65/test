@@ -21,4 +21,14 @@ public class MeanMedianMode {
         }
         return sum_elements/array_length;
     }
+    public static int FindMedian(int arr[]){
+        int array_length=arr.length;
+        if(array_length%2==1){
+            return arr[array_length/2];
+        }
+        else{
+            return (arr[array_length/2] +arr[array_length/2+1])/2;
+        }
+    }
+    
 }
