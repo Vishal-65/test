@@ -14,19 +14,24 @@ public class MarksheetOfStudent {
        System.out.println(Marksheet.size());
        System.out.println("Marks Of All Subjects:"+Marksheet);
        System.out.println("Total Marks:"+total);
-       double percentage=(double)(total/(Marksheet.size()*100)*100);
+       float percentage=(float)(total/Marksheet.size()*100)*100;
        System.out.println("Percentage: "+percentage);
 
         // removed the marks of subject-02
-         total=0;
-        Marksheet.remove(1);
-        for(int position=0;position<Marksheet.size();position++){
-            total=total+Marksheet.get(position);
+        System.out.println("Which element u want to remove");
+        int Pos=sc.nextInt();
+        try{
+            Marksheet.remove(Pos);
+            total=total-Marksheet.get(Pos);
         }
+        catch(Exception exception){
+           System.out.println("Plese give the valid position / give the position less than a Array Size");
+        }
+
         System.out.println(Marksheet.size());
         System.out.println("Marks Of All Subjects:"+Marksheet);
         System.out.println("Total Marks:"+total);
-        percentage=(double)(total/(Marksheet.size()*100)*100);
+        percentage=(float)total/(Marksheet.size()*100)*100;
         System.out.print("Percentage: "+percentage);
     }
 }
