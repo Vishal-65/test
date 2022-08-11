@@ -11,10 +11,18 @@ public class MarksheetOfStudent {
            Marksheet.add(sc.nextInt());
            total=total+Marksheet.get(position);
        }
-       
+
        System.out.println("Marks Of All Subjects:"+Marksheet);
        System.out.println("Total Marks:"+total);
-       double percentage=(double)(total/500*100);
+       double percentage=(double)(total/(Marksheet.size()*100)*100);
        System.out.print("Percentage: "+percentage);
+       
+        // removed the marks of subject-02
+
+        Marksheet.remove(1);
+        System.out.println("Marks Of All Subjects:"+Marksheet);
+        System.out.println("Total Marks:"+total);
+        percentage=(double)(total/(Marksheet.size()*100)*100);
+        System.out.print("Percentage: "+percentage);
     }
 }
